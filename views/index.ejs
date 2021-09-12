@@ -8,6 +8,11 @@
                 <div class="anim-btn__overlay"></div>
             </div>
         </form>
+        <ul class="p-0 text-center">
+            <% texts.forEach(function(text){ %>
+                <li> <%= text.syncedText %></li>
+            <% }) %>
+        </ul>
     </div>
 </body>
 </html>

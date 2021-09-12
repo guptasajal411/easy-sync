@@ -24,9 +24,16 @@ exports.postAPI = async function(req, res) {
             texts: newtext
         }
     }).exec();
-    res.redirect("/api");
+    res.redirect("/");
 }
 
 exports.getHomepage = async function(req, res){
-    res.render("index");
+    User.find({}, await function(err, user){
+        if (err) {
+            res.send(err);
+        } else {
+            res.render("index", { texts: user[0].texts.reverse() });
+        }
+    });
+    // res.render("index", {posts: });
 }
