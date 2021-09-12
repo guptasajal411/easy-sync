@@ -9,6 +9,7 @@ app
 
 app
     .route("/api")
-    .get(controller.getAPI);
+    .get(controller.getAPI)
+    .post(controller.postAPI);
 
 module.exports = app;

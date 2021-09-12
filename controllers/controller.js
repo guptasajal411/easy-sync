@@ -6,15 +6,7 @@ exports.getAPI = async function(req, res) {
     //     "texts": [{ "syncedText": "String" }],
     //     "password": "admin"
     // });
-    // newUser.save();
-
-    const newtext = {syncedText: "say waht now"};
-
-    await User.findOneAndUpdate({ username: "admin" }, {
-        $push: {
-            texts: newtext
-        }
-    }).exec();
+    // await newUser.save();
 
     User.find({}, await function(err, user){
         if (err) {
@@ -23,6 +15,16 @@ exports.getAPI = async function(req, res) {
             res.send(user);
         }
     });
+}
+
+exports.postAPI = async function(req, res) {
+    const newtext = {syncedText: req.body.newtext};
+    await User.findOneAndUpdate({ username: "admin" }, {
+        $push: {
+            texts: newtext
+        }
+    }).exec();
+    res.redirect("/api");
 }
 
 exports.getHomepage = async function(req, res){
