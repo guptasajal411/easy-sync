@@ -7,4 +7,8 @@ app
     .route("/")
     .get(controller.getHomepage);
 
+app
+    .route("/api")
+    .get(controller.getAPI);
+
 module.exports = app;

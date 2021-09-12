@@ -1,6 +1,6 @@
 const User = require("../models/model.js");
 
-exports.getHomepage = async function(req, res) {
+exports.getAPI = async function(req, res) {
     // const newUser = new User({
     //     "username": "admin",
     //     "texts": [{ "syncedText": "String" }],
@@ -23,4 +23,8 @@ exports.getHomepage = async function(req, res) {
             res.send(user);
         }
     });
+}
+
+exports.getHomepage = async function(req, res){
+    res.render("index");
 }
