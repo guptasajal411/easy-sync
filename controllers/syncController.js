@@ -1,28 +1,19 @@
 const User = require("../models/model.js");
 
-exports.getAPI = async function(req, res) {
-    // const newUser = new User({
-    //     "username": "admin",
-    //     "texts": [{ "syncedText": "String" }],
-    //     "password": "admin"
-    // });
-    // await newUser.save();
-
-    User.find({}, await function(err, user){
-        if (err) {
-            res.send(err);
+exports.geteasysync = function(req, res){
+    User.findOne({ _id: req.params.userID }, function(err, user){
+        if (err){
+            res.send("there was an error with mongoose <br>" + err);
         } else {
-            res.send(user);
+            if (user == null){
+                res.send("Please <a href='/register'>register</a> or <a href='/login'>sign in</a> before accessing easy sync.")
+            } else {
+                if (user.signedIn == false){
+                    res.send("Hi " + user.username + ", please sign in before accessing easy sync.");
+                } else {
+                    res.render("easysync", { username: user.username, syncs: user.texts });
+                }
+            }
         }
     });
-}
-
-exports.postAPI = async function(req, res) {
-    const newtext = {syncedText: req.body.newtext};
-    await User.findOneAndUpdate({ username: "admin" }, {
-        $push: {
-            texts: newtext
-        }
-    }).exec();
-    res.redirect("/");
 }

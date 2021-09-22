@@ -1,0 +1,138 @@
+body {
+    background-color: #0093e9;
+    background-image: linear-gradient(246deg, #0093e9 0%, #80d0c7 100%);
+	min-height: 100vh;
+	max-width: 100vw!important;
+	overflow-x: hidden;
+}
+
+.navbar {
+    font-family: "Josefin Sans";
+}
+.navbar-brand {
+    font-size: 2rem !important;
+    font-style: italic;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li.nav-item{
+    display: flex;
+    align-items: center;
+}
+
+.wrapper h2 {
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+}
+
+.clipboard {
+    width: 40vw;
+    height: 4vh;
+	min-width: 200px;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    font-family: "Montserrat", sans-serif;
+    background-color: white;
+    font-size: 1.25em;
+}
+
+.clipboard:focus {
+    color: #212529;
+    background-color: #fff;
+    outline: 0;
+    animation: animationForFocus;
+    animation-duration: 0.25s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.anim-btn {
+    width: max-content;
+    position: relative;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+.anim-btn__button {
+    padding: 16px 32px 13px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #534e4a;
+    color: #2e2d2c;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 300ms ease, transform 300ms ease;
+}
+.anim-btn__button:hover,
+.anim-btn__button:focus {
+    color: #fff;
+    cursor: pointer;
+}
+
+.anim-btn__button:hover + .anim-btn__overlay,
+.anim-btn__button:focus + .anim-btn__overlay {
+    transform: translateY(calc(-100% + 2px));
+}
+
+.anim-btn__button:active {
+    transform: scale(0.8);
+}
+
+.anim-btn__button:active + .anim-btn__overlay {
+    transform: translateY(calc(-100% + 2px)) scale(0.8);
+}
+.anim-btn__overlay {
+    background-color: #534e4a;
+    height: calc(100% + 2px);
+    width: 100%;
+    position: absolute;
+    bottom: calc(-100% - 2px);
+    left: 0;
+    z-index: -1;
+    transition: transform 300ms ease;
+}
+
+.wrapper ul{
+	list-style-type: none;
+}
+
+.wrapper li{
+	min-width: 40vw;
+	max-width: 40vw;
+	border: 1px solid black;
+	margin: 1rem auto;
+	padding: 1rem;
+	background-color: #534e4a;
+	color: #ffffff;
+	transition: transform 0.25s;
+}
+
+.wrapper li:hover{
+	transform: scale(1.025);
+	cursor: pointer;
+}
+
+.wrapper li:focus{
+	transform: scale(0.75);
+}
+
+@keyframes animationForNotification {
+	0%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}

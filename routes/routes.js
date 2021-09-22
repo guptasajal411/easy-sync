@@ -19,6 +19,7 @@ app
     .post(authController.postLogin);
 
 app
-    .route("/user/:userId")
+    .route("/user/:userID")
+    .get(syncController.geteasysync);
 
 module.exports = app;

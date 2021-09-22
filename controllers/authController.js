@@ -55,7 +55,7 @@ exports.postLogin = async function(req, res){
                         if (result == true){
                             user.signedIn = true;
                             await user.save();
-                            res.send("Authentication Successful!");
+                            res.redirect("/user/" + user._id);
                         } else {
                             res.send("Authentication failed. Wrong password, please try again.");
                         }
