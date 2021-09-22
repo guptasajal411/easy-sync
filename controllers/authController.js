@@ -7,3 +7,7 @@ exports.getHomepage = async function(req, res){
 exports.getRegister = async function(req, res){
     res.render("register");
 }
+
+exports.getLogin = async function(req, res){
+    res.render("login");
+}

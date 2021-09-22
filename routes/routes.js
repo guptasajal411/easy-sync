@@ -12,4 +12,8 @@ app
     .route("/register")
     .get(authController.getRegister);
 
+app
+    .route("/login")
+    .get(authController.getLogin);
+
 module.exports = app;
