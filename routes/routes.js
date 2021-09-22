@@ -18,4 +18,7 @@ app
     .get(authController.getLogin)
     .post(authController.postLogin);
 
+app
+    .route("/user/:userId")
+
 module.exports = app;

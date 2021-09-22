@@ -22,7 +22,8 @@ exports.postRegister = async function(req, res){
                     } else {
                         const newUser = new User({
                             username: req.body.username,
-                            password: hash
+                            password: hash,
+                            signedIn: false
                         });
                         await newUser.save();
                         res.redirect("/");
@@ -47,12 +48,14 @@ exports.postLogin = async function(req, res){
             if (user == null){
                 res.send("This username doesnt exist. Please <a href='/register'>register</a> before logging in.")
             } else {
-                bcrypt.compare(req.body.password, user.password, function(err, result) {
+                bcrypt.compare(req.body.password, user.password, async function(err, result) {
                     if (err){
                         res.send("there was an error with bcrypt <br>" + err);
                     } else {
                         if (result == true){
-                            res.send("Authentication Successful!")
+                            user.signedIn = true;
+                            await user.save();
+                            res.send("Authentication Successful!");
                         } else {
                             res.send("Authentication failed. Wrong password, please try again.");
                         }
