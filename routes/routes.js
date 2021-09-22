@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
 
-const controller = require('../controllers/controller.js');
+const syncController = require('../controllers/syncController.js');
+const authController = require('../controllers/authController.js');
 
 app
     .route("/")
-    .get(controller.getHomepage);
+    .get(authController.getHomepage);
 
 app
-    .route("/api")
-    .get(controller.getAPI)
-    .post(controller.postAPI);
+    .route("/register")
+    .get(authController.getRegister);
 
 module.exports = app;

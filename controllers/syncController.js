@@ -26,14 +26,3 @@ exports.postAPI = async function(req, res) {
     }).exec();
     res.redirect("/");
 }
-
-exports.getHomepage = async function(req, res){
-    User.find({}, await function(err, user){
-        if (err) {
-            res.send(err);
-        } else {
-            res.render("homepage");
-        }
-    });
-    // res.render("index", {posts: });
-}
