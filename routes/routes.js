@@ -21,6 +21,10 @@ app
 app
     .route("/user/:userID")
     .get(syncController.geteasysync)
-    .post(syncController.posteasysync);
+    .post(syncController.posteasysync)
+    
+app
+    .route("/user/:userID/signOut")
+    .post(authController.postSignOut);
 
 module.exports = app;

@@ -36,11 +36,13 @@
                         <a href="http://github.com/guptasajal411/easy-sync" class="nav-link" target="_blank">GitHub</a>
                     </li>
                     <li class="nav-item mx-2">
-                        <a href="/login" class="nav-link">
-                            <div class="anim-btn">
-                                <button class="anim-btn__button">Sign Out</button>
-                                <div class="anim-btn__overlay"></div>
-                            </div>
+                        <a class="nav-link">
+                            <form action="/user/<%= userID %>/signOut" method="POST">
+                                <div class="anim-btn">
+                                    <button class="anim-btn__button">Sign Out</button>
+                                    <div class="anim-btn__overlay"></div>
+                                </div>
+                            </form>
                         </a>
                     </li>
                 </ul>
@@ -65,9 +67,9 @@
                 <% }) %>
         </ul>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/index.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -65,3 +65,15 @@ exports.postLogin = async function(req, res){
         }
     });
 }
+
+exports.postSignOut = function(req, res){
+	User.findOne({ _id: req.params.userID }, async function(err, user){
+		if (err) {
+			res.send("there was an error with mongoose <br>" + err);
+		} else {
+			user.signedIn = false;
+			await user.save();
+			res.redirect("/");
+		}
+	});
+}

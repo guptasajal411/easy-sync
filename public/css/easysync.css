@@ -141,4 +141,5 @@ ul.text-center li{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    min-width: 350px!important;
 }
