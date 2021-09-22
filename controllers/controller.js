@@ -32,7 +32,7 @@ exports.getHomepage = async function(req, res){
         if (err) {
             res.send(err);
         } else {
-            res.render("index", { texts: user[0].texts.reverse() });
+            res.render("homepage");
         }
     });
     // res.render("index", {posts: });
