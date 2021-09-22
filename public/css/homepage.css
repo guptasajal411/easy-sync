@@ -56,6 +56,13 @@ body {
     display: inline-block;
 	/* margin-bottom: 25vh; */
 }
+
+.josefin{
+    font-family: "Josefin Sans";
+}
+.play{
+    font-family: "Play";
+}
 .anim-btn__button {
     padding: 16px 32px 13px;
     background-color: rgba(0, 0, 0, 0);

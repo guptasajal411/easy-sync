@@ -137,9 +137,16 @@ li.nav-item{
 	}
 }
 
-ul.text-center li{
+ul.text-start li{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    min-width: 350px!important;
+}
+
+.josefin{
+    font-family: "Josefin Sans";
+}
+
+.play{
+    font-family: "Play";
 }

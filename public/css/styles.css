@@ -14,6 +14,12 @@ body {
     font-style: italic;
 }
 
+.josefin{
+    font-family: "Josefin Sans";
+}
+.play{
+    font-family: "Play";
+}
 .wrapper {
     display: flex;
     flex-direction: column;

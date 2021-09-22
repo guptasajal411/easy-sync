@@ -19,9 +19,6 @@ exports.geteasysync = function(req, res){
 }
 
 exports.posteasysync = async function(req, res) {
-    console.log("req.body.newtext")
-    console.log("req.params.userID")
-    console.log("req.originalUrl)")
     const newtext = { syncedText: req.body.newtext };
     await User.findOneAndUpdate({ _id: req.params.userID }, {
         $push: {
