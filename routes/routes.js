@@ -15,6 +15,7 @@ app
 
 app
     .route("/login")
-    .get(authController.getLogin);
+    .get(authController.getLogin)
+    .post(authController.postLogin);
 
 module.exports = app;
