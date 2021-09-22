@@ -136,3 +136,9 @@ li.nav-item{
 		opacity: 0;
 	}
 }
+
+ul.text-center li{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

@@ -20,6 +20,7 @@ app
 
 app
     .route("/user/:userID")
-    .get(syncController.geteasysync);
+    .get(syncController.geteasysync)
+    .post(syncController.posteasysync);
 
 module.exports = app;

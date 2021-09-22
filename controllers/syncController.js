@@ -11,9 +11,22 @@ exports.geteasysync = function(req, res){
                 if (user.signedIn == false){
                     res.send("Hi " + user.username + ", please sign in before accessing easy sync.");
                 } else {
-                    res.render("easysync", { username: user.username, syncs: user.texts });
+                    res.render("easysync", { username: user.username, userID: user._id, syncs: user.texts.reverse() });
                 }
             }
         }
     });
+}
+
+exports.posteasysync = async function(req, res) {
+    console.log("req.body.newtext")
+    console.log("req.params.userID")
+    console.log("req.originalUrl)")
+    const newtext = { syncedText: req.body.newtext };
+    await User.findOneAndUpdate({ _id: req.params.userID }, {
+        $push: {
+            texts: newtext
+        }
+    }).exec();
+    res.redirect(req.originalUrl);
 }

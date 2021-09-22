@@ -48,10 +48,8 @@
         </div>
     </nav>
     <div class="wrapper">
-        <h2>Ctrl-C Ctrl-V made easy.</h2>
-        <h4>Welcome, <%= username %>
-        </h4>
-        <form action="/api" method="POST">
+        <h2>Welcome, <%= username %></h2>
+        <form action="/user/<%= userID %>" method="POST">
             <input name="newtext" type="text" id="myInput" class="clipboard px-2 py-3" placeholder="Paste here..."
                 required>
             <div class="anim-btn">
