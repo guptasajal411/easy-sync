@@ -79,7 +79,6 @@ exports.postSignOut = function(req, res){
 }
 
 exports.postDeleteText = function(req, res){
-    console.log("function is called")
-    console.log(req.params)
-    res.send("delete")
+    console.log(req.params.userID);
+    console.log(req.body);
 }
