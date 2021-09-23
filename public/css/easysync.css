@@ -102,7 +102,7 @@ li.nav-item{
 	list-style-type: none;
 }
 
-.wrapper li{
+.wrapper li p{
 	min-width: 40vw;
 	max-width: 40vw;
 	border: 1px solid black;
@@ -113,12 +113,12 @@ li.nav-item{
 	transition: transform 0.25s;
 }
 
-.wrapper li:hover{
+.wrapper li p:hover{
 	transform: scale(1.025);
 	cursor: pointer;
 }
 
-.wrapper li:focus{
+.wrapper li p:focus{
 	transform: scale(0.75);
 }
 
@@ -138,9 +138,24 @@ li.nav-item{
 }
 
 ul.text-start li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+ul.text-start li p{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    min-width: 40vw;
+}
+
+ul.text-start li button{
+    position: absolute;
+    left: 71vw;
+    background: none;
+    border: none;
 }
 
 .josefin{

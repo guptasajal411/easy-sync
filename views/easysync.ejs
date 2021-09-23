@@ -48,7 +48,8 @@
         </div>
     </nav>
     <div class="wrapper">
-        <h2 class="josefin">Welcome, <%= username %></h2>
+        <h2 class="josefin">Welcome, <%= username %>
+        </h2>
         <form action="/user/<%= userID %>" method="POST" class="play">
             <input name="newtext" type="text" id="myInput" class="clipboard px-2 py-3" placeholder="Paste here..."
                 required>
@@ -60,9 +61,16 @@
         <ul class="p-0 text-start">
             <% syncs.forEach(function(sync){ %>
                 <li>
-                    <%= sync.syncedText %>
+                    <p class="mb-0">
+                        <%= sync.syncedText %>
+                    </p>
+                    <form action="/user/<%= userID %>/deleteText" method="POST">
+                        <button type="submit" name="delete text button submit">
+                            <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
+                        </button>
+                    </form>
                 </li>
-                <% }) %>
+            <% }); %>
         </ul>
     </div>
     <script src="/js/jquery.min.js"></script>
