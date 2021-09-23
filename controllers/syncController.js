@@ -11,6 +11,7 @@ exports.geteasysync = function(req, res){
                 if (user.signedIn == false){
                     res.send("Hi " + user.username + ", please sign in before accessing easy sync.");
                 } else {
+                    console.log(user.texts.reverse())
                     res.render("easysync", { username: user.username, userID: user._id, syncs: user.texts.reverse() });
                 }
             }

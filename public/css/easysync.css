@@ -102,7 +102,7 @@ li.nav-item{
 	list-style-type: none;
 }
 
-.wrapper li p{
+.wrapper  p{
 	min-width: 40vw;
 	max-width: 40vw;
 	border: 1px solid black;
@@ -113,12 +113,12 @@ li.nav-item{
 	transition: transform 0.25s;
 }
 
-.wrapper li p:hover{
+.wrapper  p:hover{
 	transform: scale(1.025);
 	cursor: pointer;
 }
 
-.wrapper li p:focus{
+.wrapper p:focus{
 	transform: scale(0.75);
 }
 

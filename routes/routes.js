@@ -29,6 +29,6 @@ app
 
 app
     .route("/user/:userID/deleteText")
-    .post(authController.postDeleteText);
+    .delete(authController.postDeleteText);
 
 module.exports = app;

@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const saltRounds = 8;
 const User = require("../models/model.js");
+const syncController = require('../controllers/syncController.js');
 
 exports.getHomepage = function(req, res){
     res.render("homepage");
@@ -79,6 +80,12 @@ exports.postSignOut = function(req, res){
 }
 
 exports.postDeleteText = function(req, res){
-    console.log(req.params.userID);
-    console.log(req.body);
+    const {id} = req.body;
+    User.findOneAndUpdate({_id:req.params.userID}, { $pull: {texts:{_id: id}} }, (err) => {
+        if(err){
+            conosle.log(err)
+        }else{
+            syncController.geteasysync(req, res);
+        }
+    })
 }
