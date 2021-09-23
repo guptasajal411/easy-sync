@@ -27,4 +27,8 @@ app
     .route("/user/:userID/signOut")
     .post(authController.postSignOut);
 
+app
+    .route("/user/:userID/deleteText")
+    .post(authController.postDeleteText);
+
 module.exports = app;

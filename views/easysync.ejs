@@ -65,7 +65,7 @@
                         <%= sync.syncedText %>
                     </p>
                     <form action="/user/<%= userID %>/deleteText" method="POST">
-                        <button type="submit" name="delete text button submit">
+                        <button name="delete text button submit" value="<%= sync.syncedText %>" type="submit" class="btn btn-outline-dark">
                             <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
                         </button>
                     </form>

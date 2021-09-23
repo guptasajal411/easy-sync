@@ -77,3 +77,8 @@ exports.postSignOut = function(req, res){
 		}
 	});
 }
+
+exports.postDeleteText = function(req, res){
+    console.log(req.params.userID);
+    console.log(req.body);
+}
