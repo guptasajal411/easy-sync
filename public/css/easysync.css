@@ -98,11 +98,7 @@ li.nav-item{
     transition: transform 300ms ease;
 }
 
-.wrapper ul{
-	list-style-type: none;
-}
-
-.wrapper li p{
+/* .wrapper li p{
 	min-width: 40vw;
 	max-width: 40vw;
 	border: 1px solid black;
@@ -111,52 +107,7 @@ li.nav-item{
 	background-color: #534e4a;
 	color: #ffffff;
 	transition: transform 0.25s;
-}
-
-.wrapper li p:hover{
-	transform: scale(1.025);
-	cursor: pointer;
-}
-
-.wrapper li p:focus{
-	transform: scale(0.75);
-}
-
-@keyframes animationForNotification {
-	0%{
-		opacity: 0;
-	}
-	25%{
-		opacity: 1;
-	}
-	75%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
-}
-
-ul.text-start li{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-ul.text-start li p{
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    min-width: 40vw;
-}
-
-ul.text-start li button{
-    position: absolute;
-    left: 71vw;
-    background: none;
-    border: none;
-}
+} */
 
 .josefin{
     font-family: "Josefin Sans";

@@ -27,3 +27,8 @@ exports.posteasysync = async function(req, res) {
     }).exec();
     res.redirect(req.originalUrl);
 }
+
+exports.postDeleteText = function(req, res){
+    res.json(req.body);
+    console.log(req.body);
+}

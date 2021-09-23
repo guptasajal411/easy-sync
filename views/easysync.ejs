@@ -58,20 +58,18 @@
                 <div class="anim-btn__overlay"></div>
             </div>
         </form>
-        <ul class="p-0 text-start">
-            <% syncs.forEach(function(sync){ %>
-                <li>
-                    <p class="mb-0">
-                        <%= sync.syncedText %>
-                    </p>
-                    <form action="/user/<%= userID %>/deleteText" method="POST">
-                        <button name="delete text button submit" value="<%= sync.syncedText %>" type="submit" class="btn btn-outline-dark">
-                            <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
-                        </button>
-                    </form>
-                </li>
-            <% }); %>
-        </ul>
+    </div>
+    <div class="wrapper">
+        <% syncs.forEach(function(sync){ %>
+            <div class="link">
+                <%= sync.syncedText %>
+            </div>
+            <form action="/user/<%= userID %>/deleteText" method="POST" name="name" value="value">
+                <button type="submit" name="syncedText" value="<%= sync.syncedText %>">
+                    <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
+                </button>
+            </form>
+        <% }); %>
     </div>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/index.js"></script>
