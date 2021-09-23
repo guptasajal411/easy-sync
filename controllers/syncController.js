@@ -29,6 +29,17 @@ exports.posteasysync = async function(req, res) {
 }
 
 exports.postDeleteText = function(req, res){
-    res.json(req.body);
-    console.log(req.body);
+    User.findOne({ _id: req.params.userID }, function (err, foundUser) {
+        if (err) {
+            res.send(err);
+        } else {
+            foundUser.texts.forEach(async function (object, index) {
+                if (object.syncedText == req.body.syncedText) {
+                    foundUser.texts.splice(index, 1);
+                    await foundUser.save();
+                    res.redirect("/user/"+req.params.userID);
+                }
+            });
+        }
+    });
 }
