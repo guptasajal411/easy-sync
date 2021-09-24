@@ -139,3 +139,18 @@ li.nav-item{
 .play{
     font-family: "Play";
 }
+
+@media only screen and (max-width: 768px) {
+    .clipboard{
+        width: 75vw;
+    }
+
+    .link{
+        max-width: 75vw;
+    }
+
+    .flex{
+        min-width: 75vw;
+        max-width: 75vw;
+    }
+}
