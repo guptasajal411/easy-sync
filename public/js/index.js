@@ -1,3 +1,5 @@
+$(".clipboard").focus();
+
 function copyToClipboard(text) {
     var $temp = $("<input>");
     $("body").append($temp);
@@ -5,7 +7,7 @@ function copyToClipboard(text) {
     document.execCommand("copy");
     $temp.remove();
 }
-$(".wrapper ul li").click(function(event){
+$(".link").click(function(event){
     event.preventDefault();
     copyToClipboard($(this).text().trim());
 });

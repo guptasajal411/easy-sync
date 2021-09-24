@@ -107,6 +107,16 @@ li.nav-item{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    transition: transform 0.25s
+}
+
+.link:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.link:active{
+    transform: scale(0.97);
 }
 
 .flex{
@@ -119,7 +129,7 @@ li.nav-item{
 }
 
 .flex:nth-child(1){
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .josefin{
