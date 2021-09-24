@@ -98,16 +98,29 @@ li.nav-item{
     transition: transform 300ms ease;
 }
 
-/* .wrapper li p{
-	min-width: 40vw;
-	max-width: 40vw;
-	border: 1px solid black;
-	margin: 1rem auto;
-	padding: 1rem;
-	background-color: #534e4a;
-	color: #ffffff;
-	transition: transform 0.25s;
-} */
+.link {
+    background-color: #534e4a;
+    padding: 1rem 1rem;
+    width: 100%;
+    max-width: 40vw;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5rem auto;
+    min-width: 40vw;
+    max-width: 40vw;
+}
+
+.flex:nth-child(1){
+    margin-top: 1rem;
+}
 
 .josefin{
     font-family: "Josefin Sans";

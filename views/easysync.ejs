@@ -61,14 +61,19 @@
     </div>
     <div class="wrapper">
         <% syncs.forEach(function(sync){ %>
-            <div class="link">
-                <%= sync.syncedText %>
+            <div class="flex">
+                <div class="link">
+                    <%= sync.syncedText %>
+                </div>
+                <form action="/user/<%= userID %>/deleteText" method="POST" name="name" value="value">
+                    <div class="anim-btn">
+                        <button class="anim-btn__button" type="submit" name="syncedText" value="<%= sync.syncedText %>">
+                            <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
+                        </button>
+                        <div class="anim-btn__overlay"></div>
+                    </div>
+                </form>
             </div>
-            <form action="/user/<%= userID %>/deleteText" method="POST" name="name" value="value">
-                <button type="submit" name="syncedText" value="<%= sync.syncedText %>">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/trash.png"/>
-                </button>
-            </form>
         <% }); %>
     </div>
     <script src="/js/jquery.min.js"></script>
