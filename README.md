@@ -24,7 +24,12 @@ Try it out: https://try-easy-sync.herokuapp.com/
 - Database: I have used MongoDB Atlas for remote database, and Mongoose for modelling the application data.
 - One schema & collection, each user has `username`, `password` & an array of bookmarks
 - Deployed on Heroku! - https://try-easy-sync.herokuapp.com/
+- 
 # 📷 Screenshots
+![image](https://user-images.githubusercontent.com/70312106/134774698-84af7522-4cd4-42ef-8c3b-1581a7b8fad4.png)
+![image](https://user-images.githubusercontent.com/70312106/134774722-2849c2a4-7b65-41af-8bda-82e3699f4a04.png)
+![image](https://user-images.githubusercontent.com/70312106/134774700-aea3cddb-0814-4288-9237-1da35aea73cf.png)
+![image](https://user-images.githubusercontent.com/70312106/134774701-673c2b05-3e79-4ebf-a60e-db5ccc8e54c3.png)
 
 # 🤔 How to use this?
 - You can access all cool features of Easy Sync here: https://try-easy-sync.herokuapp.com/
